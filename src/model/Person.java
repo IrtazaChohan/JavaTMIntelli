@@ -1,13 +1,15 @@
 package model;
 
-import java.lang.reflect.Constructor;
 import java.time.LocalDate;
-public class person {
+public class Person {
     private String firstName;
     private String lastName;
     private LocalDate dob;
+    private Address address;
+    private Person spouse;
+    private Pet pet;
 
-    public person(String firstName, String lastName, LocalDate dob) {
+    public Person(String firstName, String lastName, LocalDate dob, Address address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dob = dob;
@@ -35,5 +37,13 @@ public class person {
 
     public void setDob(LocalDate dob) {
         this.dob = dob;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
