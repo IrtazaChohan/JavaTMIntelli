@@ -9,10 +9,18 @@ public class Person {
     private Person spouse;
     private Pet pet;
 
-    public Person(String firstName, String lastName, LocalDate dob, Address address) {
+    public Person(String firstName, String lastName, LocalDate dob, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dob = dob;
+    }
+
+    public Person getSpouse() {
+        return spouse;
+    }
+
+    public void setSpouse(Person spouse) {
+        this.spouse = spouse;
     }
 
     public String getFirstName() {
@@ -45,5 +53,25 @@ public class Person {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dob=" + dob +
+                ", address=" + address +
+                ", spouse=" + spouse +
+                ", pet=" + pet +
+                '}';
     }
 }
